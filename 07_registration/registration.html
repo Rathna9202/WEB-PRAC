@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up Form</title>
+    <link rel="stylesheet" href="registration.css">
+</head>
+<body>
+    <form onsubmit="return main()">
+        <div id="container" style="text-align: center;">
+            <h1>Sign Up</h1>
+        </div>
+        <div id="form">
+            <label>Username:</label><br>
+            <input type="text" id="username" onkeyup="validateUsername()"><br>
+            <span id="errname"></span><br><br>
+
+            <label>Email:</label><br>
+            <input type="email" id="email" onkeyup="validateEmail()"><br>
+            <span id="erremail"></span><br><br>
+
+            <label>Password:</label><br>
+            <input type="password" id="password" onkeyup="validatePassword()"><br>
+            <span id="errpassword"></span><br><br>
+
+            <label>Confirm Password:</label><br>
+            <input type="password" id="confpassword" onkeyup="validateConfirmPassword()"><br>
+            <span id="errconf"></span><br><br>
+
+            <button type="submit">Sign Up</button>
+        </div>
+    </form>
+
+    <script>
+        function validateUsername() {
+            var username = document.getElementById("username").value;
+            var errName = document.getElementById("errname");
+            errName.innerHTML = "";
+
+            if (username === "") {
+                errName.innerHTML = "Username is required";
+            }
+        }
+
+        function validateEmail() {
+            var email = document.getElementById("email").value;
+            var erremail = document.getElementById("erremail");
+            erremail.innerHTML = "";
+
+            // Simple email validation pattern
+            var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailPattern.test(email)) {
+                erremail.innerHTML = "Valid Email is required";
+            }
+        }
+
+        function validatePassword() {
+            var password = document.getElementById("password").value;
+            var errPassword = document.getElementById("errpassword");
+            errPassword.innerHTML = "";
+
+            var passwordPattern = /^(?=.*[A-Z])(?=.*[!@#$%^&*])(?=.*[a-zA-Z]).{8,}$/;
+            if (!passwordPattern.test(password)) {
+                errPassword.innerHTML = "Password must contain at least 1 special character, 1 capital letter, and be at least 8 characters long";
+            }
+        }
+
+        function validateConfirmPassword() {
+            var password = document.getElementById("password").value;
+            var confpassword = document.getElementById("confpassword").value;
+            var errConf = document.getElementById("errconf");
+            errConf.innerHTML = "";
+
+            if (password !== confpassword) {
+                errConf.innerHTML = "Passwords do not match";
+            }
+        }
+
+        function main() {
+            validateUsername();
+            validateEmail();
+            validatePassword();
+            validateConfirmPassword();
+
+            // If any error message is set, prevent form submission
+            if (document.getElementById("errname").innerHTML ||
+                document.getElementById("erremail").innerHTML ||
+                document.getElementById("errpassword").innerHTML ||
+                document.getElementById("errconf").innerHTML) {
+                return false;
+            }
+
+            return true;
+        }
+    </script>
+</body>
+</html>

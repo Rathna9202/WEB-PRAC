@@ -1,0 +1,41 @@
+.navbar {
+  background-color: #333;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  padding: 10px 0;
+}
+.navbar .container {
+  width: 90%;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.navbar .logo {
+  float: left;
+  color: #fff;
+  font-size: 24px;
+  font-weight: bold;
+}
+.navbar .nav-links {
+  float: right;
+}
+.navbar .nav-links a {
+  color: #fff;
+  text-decoration: none;
+  margin-left: 20px;
+  padding: 10px 15px;
+  transition: color 0.3s ease;
+}
+.navbar .nav-links a:hover {
+  color: #ff6347;
+}
+
+section {
+  padding: 100px 0;
+  text-align: center;
+  font-size: 24px;
+}
+section:nth-of-type(even) {
+  background-color: #f4f4f4;
+}/*# sourceMappingURL=style.css.map */

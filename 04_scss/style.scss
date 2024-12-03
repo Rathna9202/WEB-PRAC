@@ -1,0 +1,54 @@
+// Define color variables
+$background-color: #333;
+$nav-link-color: #fff;
+$nav-link-hover-color: #ff6347;
+
+// Navbar Styling
+.navbar {
+  background-color: $background-color;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  padding: 10px 0;
+
+  .container {
+    width: 90%;
+    margin: 0 auto;
+    overflow: hidden; // To clear the floats
+  }
+
+  .logo {
+    float: left;
+    color: $nav-link-color;
+    font-size: 24px;
+    font-weight: bold;
+  }
+
+  .nav-links {
+    float: right;
+
+    a {
+      color: $nav-link-color;
+      text-decoration: none;
+      margin-left: 20px;
+      padding: 10px 15px;
+      transition: color 0.3s ease;
+
+      &:hover {
+        color: $nav-link-hover-color;
+      }
+    }
+  }
+}
+
+// Style for content sections
+section {
+  padding: 100px 0;
+  text-align: center;
+  font-size: 24px;
+
+  &:nth-of-type(even) {
+    background-color: #f4f4f4;
+  }
+}

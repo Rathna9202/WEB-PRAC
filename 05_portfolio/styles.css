@@ -1,0 +1,202 @@
+/* Navigation Styles */
+nav {
+    background-color: #a2a2a2;
+    padding: 10px 0;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.nav-links li {
+    display: inline;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    padding: 8px 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.nav-links a:hover {
+    background-color: #333;
+}
+
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #a2a2a2;
+}
+
+/* Container */
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header */
+header {
+    background-color:#a2a2a2;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+
+.profile-img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+}
+
+.social-links {
+    margin-top: 20px; /* Adjust the value as needed */
+}
+
+.social-links a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+}
+
+.download-btn {
+    background-color: #fff;
+    color: #a2a2a2;
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    border: 2px solid #fff;
+    margin-top: 15px;
+    display: inline-block;
+}
+
+.download-btn:hover {
+    background-color: #fff;
+    color: #333;
+    border: 2px solid #a2a2a2;
+}
+
+/* Academic Profile Section */
+#academic-profile {
+    background-color: #fff;
+    padding: 30px 0;
+}
+
+#academic-profile h2 {
+    text-align: center;
+    color: #333;
+}
+
+#academic-profile ul {
+    margin-left: 10px;
+    list-style-type: none;
+    padding: 0;
+}
+
+#academic-profile li {
+    padding: 10px 0;
+    font-size: 18px;
+}
+
+.uni-name {
+    margin-left: 20px; /* Adjust the space as needed */
+}
+
+strong{
+    color: #333;
+}
+
+/* Skills Section */
+#skills {
+    background-color: #a2a2a2;
+    padding: 30px 0;
+}
+
+#skills h2 {
+    text-align: center;
+    color: #333;
+}
+
+.skills-list {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    padding: 0;
+}
+
+.skills-list li {
+    padding: 10px 15px;
+    margin: 5px;
+    background-color: #333;
+    color: white;
+    border-radius: 5px;
+}
+
+/* Projects Section */
+#projects {
+    background-color: #fff;
+    padding: 30px 0;
+}
+
+#projects h2 {
+    text-align: center;
+    color: #333;
+}
+
+.project {
+    background-color: #e0e0e0;
+    margin: 20px 0;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.project h3 {
+    margin: 0;
+    color: #333;
+}
+
+.project p {
+    margin: 10px 0 0;
+}
+
+/* Contact Section */
+#contact {
+    background-color: #a2a2a2;
+    padding: 30px 0;
+}
+
+#contact h2 {
+    text-align: center;
+    color: #fff;
+}
+
+.contact-details {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+}
+
+.contact-details li {
+    margin: 10px 0;
+    font-size: 18px;
+}
+
+.contact-details a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.contact-details a:hover {
+    text-decoration: underline;
+}
